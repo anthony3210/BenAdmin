@@ -18,7 +18,9 @@ import com.kms.katalon.core.testobject.RestRequestObjectBuilder
 import com.kms.katalon.core.testobject.TestObjectProperty
 import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
 
-body = /{"query":"mutation {createAddress(address:{addressLine1: \"168 smith\" addressLine2: \"line2\" city: \"chicago\" attention: \"laura\" postalCode: \"60014\" stateProvinceCode: \"IL\" county: \"Mchenry\" countryISOCode: \"US\"}){addressUUID addressLine1 addressLine2 city stateProvinceCode attention county countryISOCode}}"}/
+RequestObject ro = findTestObject('Client Person/Services/Client/Create Client/CreateClient');
+
+body = /{"query":"mutation {createAddress(address:{addressLine1: \"${addressLine1}\" addressLine2: \"line2\" city: \"chicago\" attention: \"laura\" postalCode: \"60014\" stateProvinceCode: \"IL\" county: \"Mchenry\" countryISOCode: \"US\"}){addressUUID addressLine1 addressLine2 city stateProvinceCode attention county countryISOCode}}"}/
 
 //body = body.replaceAll(/[\s]+/,"") // body is now a Java.Lang.String (immutable)
 
@@ -26,7 +28,7 @@ body = /{"query":"mutation {createAddress(address:{addressLine1: \"168 smith\" a
 TestObjectProperty header = new TestObjectProperty("Content-Type", ConditionType.EQUALS, "application/json")
 ArrayList defaultHeaders = Arrays.asList(header)
 
-RequestObject ro = findTestObject('Client Person/Services/Client/Create Client/CreateClient_REST');
+
 ro.setHttpHeaderProperties(defaultHeaders)
 ro.setBodyContent(new HttpTextBodyContent(body));
 
@@ -36,6 +38,6 @@ response = WS.sendRequest(ro);
 // verify status
 WS.verifyResponseStatusCode(response, 200);
 
-WS.verifyElementPropertyValue(response, 'data.createAddress.addressLine1', "168 smith")
+WS.verifyElementPropertyValue(response, 'data.createAddress.addressLine1', "169 Smith Street")
 
 println response.getResponseBodyContent()

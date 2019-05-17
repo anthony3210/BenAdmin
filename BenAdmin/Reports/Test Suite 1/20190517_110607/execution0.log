@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-05-17T11:06:18</date>
+  <millis>1558109178767</millis>
+  <sequence>0</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startSuite</method>
+  <thread>1</thread>
+  <message>Start Test Suite : Test Suites/Test Suite 1</message>
+  <nestedLevel>0</nestedLevel>
+  <property name="name">Test Suite 1</property>
+  <property name="description"></property>
+  <property name="id">Test Suites/Test Suite 1</property>
+</record>
+<record>
+  <date>2019-05-17T11:06:18</date>
+  <millis>1558109178777</millis>
+  <sequence>1</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>hostName = jasonnelson - 192.168.1.13</message>
+  <nestedLevel>0</nestedLevel>
+  <property name="hostName">jasonnelson - 192.168.1.13</property>
+</record>
+<record>
+  <date>2019-05-17T11:06:18</date>
+  <millis>1558109178777</millis>
+  <sequence>2</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>os = Mac OS X 64bit</message>
+  <nestedLevel>0</nestedLevel>
+  <property name="os">Mac OS X 64bit</property>
+</record>
+<record>
+  <date>2019-05-17T11:06:18</date>
+  <millis>1558109178778</millis>
+  <sequence>3</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>hostAddress = 192.168.1.13</message>
+  <nestedLevel>0</nestedLevel>
+  <property name="hostAddress">192.168.1.13</property>
+</record>
+<record>
+  <date>2019-05-17T11:06:18</date>
+  <millis>1558109178779</millis>
+  <sequence>4</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>katalonVersion = 6.1.5.3</message>
+  <nestedLevel>0</nestedLevel>
+  <property name="katalonVersion">6.1.5.3</property>
+</record>
+<record>
+  <date>2019-05-17T11:06:18</date>
+  <millis>1558109178891</millis>
+  <sequence>5</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startTest</method>
+  <thread>1</thread>
+  <message>Start Test Case : Test Cases/Client Person/Services/Client/Create Client/Services Create Client required fields</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="name">Test Cases/Client Person/Services/Client/Create Client/Services Create Client required fields</property>
+  <property name="description">This test case verifies that all of the required fields are required for Create Client.</property>
+  <property name="id">Test Cases/Client Person/Services/Client/Create Client/Services Create Client required fields</property>
+  <property name="source">\\Users\\jasonnelson\\BenAdmin\\BenAdmin\\Test Cases\\Client Person\\Services\\Client\\Create Client\\Services Create Client required fields.tc</property>
+  <property name="tag">CreateClient</property>
+  <property name="isOptional">false</property>
+</record>
+<record>
+  <date>2019-05-17T11:06:19</date>
+  <millis>1558109179094</millis>
+  <sequence>7</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : ro = findTestObject(\&amp;quot;Client Person/Services/Client/Create Client/CreateClient\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">21</property>
+  <property name="stepIndex">1</property>
+</record>
+<record>
+  <date>2019-05-17T11:06:19</date>
+  <millis>1558109179159</millis>
+  <sequence>9</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : ro = findTestObject(\&amp;quot;Client Person/Services/Client/Create Client/CreateClient\&amp;quot;)</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-17T11:06:19</date>
+  <millis>1558109179159</millis>
+  <sequence>10</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>startKeyword</method>
+  <thread>1</thread>
+  <message>Start action : body = {\&amp;quot;query\&amp;quot;:\&amp;quot;mutation {createAddress(address:{addressLine1: \\\&amp;quot;$addressLine1\\\&amp;quot; addressLine2: \\\&amp;quot;line2\\\&amp;quot; city: \\\&amp;quot;chicago\\\&amp;quot; attention: \\\&amp;quot;laura\\\&amp;quot; postalCode: \\\&amp;quot;60014\\\&amp;quot; stateProvinceCode: \\\&amp;quot;IL\\\&amp;quot; county: \\\&amp;quot;Mchenry\\\&amp;quot; countryISOCode: \\\&amp;quot;US\\\&amp;quot;}){addressUUID addressLine1 addressLine2 city stateProvinceCode attention county countryISOCode}}\&amp;quot;}</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="startLine">23</property>
+  <property name="stepIndex">2</property>
+</record>
+<record>
+  <date>2019-05-17T11:06:19</date>
+  <millis>1558109179164</millis>
+  <sequence>11</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endKeyword</method>
+  <thread>1</thread>
+  <message>End action : body = {\&amp;quot;query\&amp;quot;:\&amp;quot;mutation {createAddress(address:{addressLine1: \\\&amp;quot;$addressLine1\\\&amp;quot; addressLine2: \\\&amp;quot;line2\\\&amp;quot; city: \\\&amp;quot;chicago\\\&amp;quot; attention: \\\&amp;quot;laura\\\&amp;quot; postalCode: \\\&amp;quot;60014\\\&amp;quot; stateProvinceCode: \\\&amp;quot;IL\\\&amp;quot; county: \\\&amp;quot;Mchenry\\\&amp;quot; countryISOCode: \\\&amp;quot;US\\\&amp;quot;}){addressUUID addressLine1 addressLine2 city stateProvinceCode attention county countryISOCode}}\&amp;quot;}</message>
+  <nestedLevel>1</nestedLevel>
+</record>
+<record>
+  <date>2019-05-17T11:06:19</date>
+  <millis>1558109179174</millis>
+  <sequence>13</sequence>
+  <level>ERROR</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Test Cases/Client Person/Services/Client/Create Client/Services Create Client required fields FAILED.\nReason:\ngroovy.lang.MissingPropertyException: No such property: addressLine1 for class: Script1558103865916\n\tat Services Create Client required fields.run(Services Create Client required fields:23)\n\tat com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)\n\tat com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)\n\tat com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:337)\n\tat com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:328)\n\tat com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:307)\n\tat com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:299)\n\tat com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:233)\n\tat com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:133)\n\tat com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:116)\n\tat com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:83)\n\tat com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)\n\tat com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)\n\tat TempTestSuite1558109177520.run(TempTestSuite1558109177520.groovy:35)\n</message>
+  <exception>
+    <message>groovy.lang.MissingPropertyException: No such property: addressLine1 for class: Script1558103865916</message>
+    <frame>
+      <class>Services Create Client required fields</class>
+      <method>run</method>
+      <line>23</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.ScriptEngine</class>
+      <method>run</method>
+      <line>194</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.ScriptEngine</class>
+      <method>runScriptAsRawText</method>
+      <line>119</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.TestCaseExecutor</class>
+      <method>runScript</method>
+      <line>337</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.TestCaseExecutor</class>
+      <method>doExecute</method>
+      <line>328</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.TestCaseExecutor</class>
+      <method>processExecutionPhase</method>
+      <line>307</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.TestCaseExecutor</class>
+      <method>accessMainPhase</method>
+      <line>299</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.TestCaseExecutor</class>
+      <method>execute</method>
+      <line>233</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.TestSuiteExecutor</class>
+      <method>accessTestCaseMainPhase</method>
+      <line>133</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.TestSuiteExecutor</class>
+      <method>accessTestSuiteMainPhase</method>
+      <line>116</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.TestSuiteExecutor</class>
+      <method>execute</method>
+      <line>83</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.TestCaseMain</class>
+      <method>startTestSuite</method>
+      <line>157</line>
+    </frame>
+    <frame>
+      <class>com.kms.katalon.core.main.TestCaseMain$startTestSuite$0</class>
+      <method>call</method>
+    </frame>
+    <frame>
+      <class>TempTestSuite1558109177520</class>
+      <method>run</method>
+      <line>35</line>
+    </frame>
+  </exception>
+  <nestedLevel>0</nestedLevel>
+  <property name="failed.exception.stacktrace">groovy.lang.MissingPropertyException: No such property: addressLine1 for class: Script1558103865916\n\tat Services Create Client required fields.run(Services Create Client required fields:23)\n\tat com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)\n\tat com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)\n\tat com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:337)\n\tat com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:328)\n\tat com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:307)\n\tat com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:299)\n\tat com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:233)\n\tat com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:133)\n\tat com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:116)\n\tat com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:83)\n\tat com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)\n\tat com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)\n\tat TempTestSuite1558109177520.run(TempTestSuite1558109177520.groovy:35)\n</property>
+  <property name="failed.exception.class">groovy.lang.MissingPropertyException</property>
+  <property name="failed.exception.message">No such property: addressLine1 for class: Script1558103865916</property>
+</record>
+<record>
+  <date>2019-05-17T11:06:19</date>
+  <millis>1558109179177</millis>
+  <sequence>15</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endTest</method>
+  <thread>1</thread>
+  <message>End Test Case : Test Cases/Client Person/Services/Client/Create Client/Services Create Client required fields</message>
+  <nestedLevel>0</nestedLevel>
+</record>
+<record>
+  <date>2019-05-17T11:06:19</date>
+  <millis>1558109179198</millis>
+  <sequence>16</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.XmlKeywordLogger</class>
+  <method>endSuite</method>
+  <thread>1</thread>
+  <message>End Test Suite : Test Suites/Test Suite 1</message>
+  <nestedLevel>0</nestedLevel>
+</record>
+</log>

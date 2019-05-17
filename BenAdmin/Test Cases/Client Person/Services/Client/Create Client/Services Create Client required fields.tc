@@ -5,4 +5,11 @@
    <tag>CreateClient</tag>
    <comment></comment>
    <testCaseGuid>4237bce5-34f6-44d4-8f97-15cfaf1895ec</testCaseGuid>
+   <variable>
+      <defaultValue>'169 Smith Street'</defaultValue>
+      <description></description>
+      <id>8b974cae-b4fe-4dc9-956b-a9909f662606</id>
+      <masked>false</masked>
+      <name>addressLine1</name>
+   </variable>
 </TestCaseEntity>
