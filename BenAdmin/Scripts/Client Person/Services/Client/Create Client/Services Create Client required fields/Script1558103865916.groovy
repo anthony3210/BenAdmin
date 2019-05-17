@@ -26,7 +26,7 @@ body = /{"query":"mutation {createAddress(address:{addressLine1: \"168 smith\" a
 TestObjectProperty header = new TestObjectProperty("Content-Type", ConditionType.EQUALS, "application/json")
 ArrayList defaultHeaders = Arrays.asList(header)
 
-RequestObject ro = findTestObject('Client Person/Services/Client/Create Client/CreateClient_REST_KS - Copy');
+RequestObject ro = findTestObject('Client Person/Services/Client/Create Client/CreateClient_REST');
 ro.setHttpHeaderProperties(defaultHeaders)
 ro.setBodyContent(new HttpTextBodyContent(body));
 
@@ -35,6 +35,7 @@ response = WS.sendRequest(ro);
 
 // verify status
 WS.verifyResponseStatusCode(response, 200);
-println response.getResponseBodyContent()
 
-/*Git test*/
+WS.verifyElementPropertyValue(response, 'data.createAddress.addressLine1', "168 smith")
+
+println response.getResponseBodyContent()
