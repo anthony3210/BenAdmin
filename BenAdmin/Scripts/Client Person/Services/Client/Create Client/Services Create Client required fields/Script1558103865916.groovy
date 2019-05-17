@@ -43,7 +43,7 @@ WS.verifyElementPropertyValue(response, 'data.createAddress.addressLine1', "169 
 WS.verifyElementPropertyValue(response, 'data.createAddress.addressLine2', "line2")
 WS.verifyElementPropertyValue(response, 'data.createAddress.city', "Chicago")
 WS.verifyElementPropertyValue(response, 'data.createAddress.attention', "Laura")
-WS.verifyElementPropertyValue(response, 'data.createAddress.postalCode', "60014")
+WS.verifyElementPropertyValue(response, 'data.createAddress.postalCode', "60015")
 WS.verifyElementPropertyValue(response, 'data.createAddress.stateProvinceCode', "IL")
 WS.verifyElementPropertyValue(response, 'data.createAddress.county', "McHenry")
 WS.verifyElementPropertyValue(response, 'data.createAddress.countryIOSCode', "US")
