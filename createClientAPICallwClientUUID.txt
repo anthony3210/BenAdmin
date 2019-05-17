@@ -1,0 +1,3 @@
+{“clientUUID”’:”ec7052a6-7b02-4110-b0f9-288284956dc2”,
+”homeAddressUUID”:”ec7052a6-7b02-4110-b0f9-288284956dc2”,
+”effectiveDate”:”01012020”,”endDate”:”01012020”,”homePhone”:”3125556789”,”mobilePhone”:”3125557890”,”workPhone”:”3125557890”,”testMember”:”LeBron”,”email”:”lbj@testemail.com”,”socialSecurityNumber”:”123-44-0987”,”dateOfBirth”:”01011976”,”firstName”:”Lebron”,”lastName”:”James”,”middleName”:”Tommy”,”suffix”:”Jr”,”prefix”:”Mr”,”language”:”English”,”disability”:”None”}
