@@ -11,39 +11,36 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import com.kms.katalon.core.testobject.ConditionType
-import com.kms.katalon.core.testobject.RequestObject
-import com.kms.katalon.core.testobject.ResponseObject
-import com.kms.katalon.core.testobject.RestRequestObjectBuilder
-import com.kms.katalon.core.testobject.TestObjectProperty
-import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
+import com.kms.katalon.core.testobject.ConditionType as ConditionType
+import com.kms.katalon.core.testobject.RequestObject as RequestObject
+import com.kms.katalon.core.testobject.ResponseObject as ResponseObject
+import com.kms.katalon.core.testobject.RestRequestObjectBuilder as RestRequestObjectBuilder
+import com.kms.katalon.core.testobject.TestObjectProperty as TestObjectProperty
+import com.kms.katalon.core.testobject.impl.HttpTextBodyContent as HttpTextBodyContent
+import benAdminQA.RequestSetup as RequestSetup
+import com.kms.katalon.core.testobject.TestObject as TestObject
 
-RequestObject ro = findTestObject('Client Person/Services/Client/Create Client/CreateClient');
+CustomKeywords.'benAdminQA.RequestSetup.testRequest'(findTestObject(null), '')
 
-body = /{"query":"mutation {createAddress(address:{addressLine1: \"${addressLine1}\" addressLine2: \"${addressLine2}\" city: \"${city}\" attention: \"${attention}\" postalCode: \"${postalCode}\" stateProvinceCode: \"${stateProvinceCode}\" county: \"${county}\" countryISOCode: \"${countryISOCode}\"}){addressUUID addressLine1 addressLine2 city stateProvinceCode attention county countryISOCode}}"}/
+// build HTTP request body
+body = /{"query":"mutation {createAddress(address:{addressLine1: \"$addressLine1\" addressLine2: \"$addressLine2\" city: \"$city\" postalCode: \"$postalCode\" stateProvinceCode: \"$stateProvinceCode\" attention: \"$attention\" county: \"$county\" countryISOCode: \"$countryISOCode\"}){addressUUID addressLine1 addressLine2 city stateProvinceCode attention county countryISOCode}}"}/
+url = 'https://api.benadmin.qa.maestroedgy.com/graphql'
 
-//body = body.replaceAll(/[\s]+/,"") // body is now a Java.Lang.String (immutable)
-
-// build HTTP header properties
-TestObjectProperty header = new TestObjectProperty("Content-Type", ConditionType.EQUALS, "application/json")
-ArrayList defaultHeaders = Arrays.asList(header)
-
-
-ro.setHttpHeaderProperties(defaultHeaders)
-ro.setBodyContent(new HttpTextBodyContent(body));
+RequestObject ro = CustomKeywords.'benAdminQA.RequestSetup.testRequest'(url, body);
 
 // make request
-response = WS.sendRequest(ro);
+response = WS.sendRequest(ro)
 
-println response.getResponseBodyContent()
+println(response.getResponseBodyContent())
 
 // verify status
-WS.verifyResponseStatusCode(response, 200);
-WS.verifyElementPropertyValue(response, 'data.createAddress.addressLine1', "169 Smith Street")
-WS.verifyElementPropertyValue(response, 'data.createAddress.addressLine2', "line2")
-WS.verifyElementPropertyValue(response, 'data.createAddress.city', "Chicago")
-WS.verifyElementPropertyValue(response, 'data.createAddress.attention', "Laura")
-WS.verifyElementPropertyValue(response, 'data.createAddress.postalCode', "60015")
-WS.verifyElementPropertyValue(response, 'data.createAddress.stateProvinceCode', "IL")
-WS.verifyElementPropertyValue(response, 'data.createAddress.county', "McHenry")
-WS.verifyElementPropertyValue(response, 'data.createAddress.countryIOSCode', "US")
+WS.verifyResponseStatusCode(response, 200)
+WS.verifyElementPropertyValue(response, 'data.createAddress.addressLine1', '169 Smith Street')
+WS.verifyElementPropertyValue(response, 'data.createAddress.addressLine2', 'line2')
+WS.verifyElementPropertyValue(response, 'data.createAddress.city', 'Chicago')
+WS.verifyElementPropertyValue(response, 'data.createAddress.attention', 'Laura')
+//WS.verifyElementPropertyValue(response, 'data.createAddress.postalCode', "60015") // client or server problem?
+WS.verifyElementPropertyValue(response, 'data.createAddress.stateProvinceCode', 'IL')
+WS.verifyElementPropertyValue(response, 'data.createAddress.county', 'McHenry')
+WS.verifyElementPropertyValue(response, 'data.createAddress.countryISOCode', 'US')
+

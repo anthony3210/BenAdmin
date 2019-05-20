@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>This test case verifies that all of the required fields are required for Create Client.</description>
+   <name>Services Create Client required fields 3</name>
+   <tag>CreateClient</tag>
+   <comment></comment>
+   <testCaseGuid>36b70370-028a-4654-8481-156b1facb2f8</testCaseGuid>
+   <variable>
+      <defaultValue>'169 Smith Street'</defaultValue>
+      <description></description>
+      <id>120b8dfc-ac94-4973-acde-027aae34d0dd</id>
+      <masked>false</masked>
+      <name>addressLine1</name>
+   </variable>
+   <variable>
+      <defaultValue>'line2'</defaultValue>
+      <description></description>
+      <id>87c33b6b-1b97-437e-be40-f27039bf740d</id>
+      <masked>false</masked>
+      <name>addressLine2</name>
+   </variable>
+   <variable>
+      <defaultValue>'Chicago'</defaultValue>
+      <description></description>
+      <id>dbcc800a-4815-4ffc-ae75-f95f9f7b9b0b</id>
+      <masked>false</masked>
+      <name>city</name>
+   </variable>
+   <variable>
+      <defaultValue>'Laura'</defaultValue>
+      <description></description>
+      <id>e7c599fd-82d9-49f6-973a-a436b59c0467</id>
+      <masked>false</masked>
+      <name>attention</name>
+   </variable>
+   <variable>
+      <defaultValue>'60015'</defaultValue>
+      <description></description>
+      <id>87042d8e-b67c-4327-8102-8263a8a5eb4b</id>
+      <masked>false</masked>
+      <name>postalCode</name>
+   </variable>
+   <variable>
+      <defaultValue>'IL'</defaultValue>
+      <description></description>
+      <id>d422af23-d232-4703-8791-14a5864cd292</id>
+      <masked>false</masked>
+      <name>stateProvinceCode</name>
+   </variable>
+   <variable>
+      <defaultValue>'McHenry'</defaultValue>
+      <description></description>
+      <id>402c8ed4-dad7-456c-920c-fa20436d2044</id>
+      <masked>false</masked>
+      <name>county</name>
+   </variable>
+   <variable>
+      <defaultValue>'US'</defaultValue>
+      <description></description>
+      <id>8340c25e-7318-4d57-93af-feb89ce832bd</id>
+      <masked>false</masked>
+      <name>countryISOCode</name>
+   </variable>
+</TestCaseEntity>
