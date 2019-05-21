@@ -78,7 +78,7 @@ public class GraphQL {
 	 * @param gql the graphQL query
 	 * @return json JSON of the form: {"query":"graphQL query"}
 	 */
-	public static def String convertGrapqQLToJSON(String gql) {
+	private static def String convertGrapqQLToJSON(String gql) {
 		// build JSON from GraphQL query
 		def json = gql.replaceAll(/[\n]+/,' '); // Java.Lang.String (immutable)
 		json = json.replaceAll(/\s{2,}/, ' ');
