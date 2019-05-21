@@ -79,9 +79,8 @@ class RequestSetup {
 		// build JSON from GraphQL query
 		def json = gql.replaceAll(/[\n]+/,' '); // Java.Lang.String (immutable)
 		json = json.replaceAll(/\s{2,}/, ' ');
-		json = json.replaceAll('"', '\\\\"');
+		json = json.replaceAll(/\"/, /\\"/);
 		json = '{"query":"'+json+'"}'
-		println json
 		
 		// set HTTP Body
 		ro.setBodyContent(new HttpTextBodyContent(json))

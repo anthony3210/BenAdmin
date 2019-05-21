@@ -14,7 +14,7 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.m
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.cucumber.keyword.internal.CucumberDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('/var/folders/g4/__0sjd1s30q6slmwstbhgk_w0000gp/T/Katalon/Test Cases/Client Person/Services/Client/Create Client/Services Create Client required fields GQL/20190520_215951/execution.properties')
+RunConfiguration.setExecutionSettingFile('/var/folders/g4/__0sjd1s30q6slmwstbhgk_w0000gp/T/Katalon/Test Cases/Client Person/Services/Client/Create Client/Services Create Client required fields GQL/20190521_085354/execution.properties')
 
 TestCaseMain.beforeStart()
 

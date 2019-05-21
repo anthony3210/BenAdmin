@@ -49,6 +49,13 @@ mutation {
 '''
 url = 'https://api.benadmin.qa.maestroedgy.com/graphql'
 
+//// build JSON from GraphQL query
+//def json = gql.replaceAll(/[\n]+/,' '); // Java.Lang.String (immutable)
+//json = json.replaceAll(/\s{2,}/, ' ');
+//json = json.replaceAll(/\"/, /\\"/);
+//json = '{"query":"'+json+'"}'
+//println json
+
 // make request
 response = WS.sendRequestAndVerify(CustomKeywords.'benAdminQA.RequestSetup.testRequestGQL'(url, gql))
 
