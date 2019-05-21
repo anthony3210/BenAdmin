@@ -62,4 +62,3 @@ WS.verifyElementPropertyValue(response, 'data.createAddress.postalCode', "60014"
 WS.verifyElementPropertyValue(response, 'data.createAddress.stateProvinceCode', 'IL')
 WS.verifyElementPropertyValue(response, 'data.createAddress.county', 'McHenry')
 WS.verifyElementPropertyValue(response, 'data.createAddress.countryISOCode', 'US')
-

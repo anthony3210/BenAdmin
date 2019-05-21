@@ -81,6 +81,7 @@ class RequestSetup {
 		json = json.replaceAll(/\s{2,}/, ' ');
 		json = json.replaceAll('"', '\\\\"');
 		json = '{"query":"'+json+'"}'
+		println json
 		
 		// set HTTP Body
 		ro.setBodyContent(new HttpTextBodyContent(json))
