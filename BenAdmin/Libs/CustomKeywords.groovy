@@ -3,17 +3,25 @@
  * This class is generated automatically by Katalon Studio and should not be modified or deleted.
  */
 
-import com.kms.katalon.core.testobject.TestObject
-
 import java.lang.String
 
+import com.kms.katalon.core.testobject.TestObject
 
-def static "benAdminQA.RequestSetup.testRequest"(
-    	Object url	
-     , 	Object body	) {
-    (new benAdminQA.RequestSetup()).testRequest(
+
+def static "benAdminQA.RequestSetup.testRequestJSON"(
+    	String url	
+     , 	String json	) {
+    (new benAdminQA.RequestSetup()).testRequestJSON(
         	url
-         , 	body)
+         , 	json)
+}
+
+def static "benAdminQA.RequestSetup.testRequestGQL"(
+    	String url	
+     , 	String gql	) {
+    (new benAdminQA.RequestSetup()).testRequestGQL(
+        	url
+         , 	gql)
 }
 
 def static "benAdminQA.RequestSetup.verifyStatusCode"(

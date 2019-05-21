@@ -42,12 +42,48 @@ import com.kms.katalon.core.util.KeywordUtil
 
 import com.kms.katalon.core.webui.exception.WebElementNotFoundException
 
-
 class RequestSetup {
+
+	/**
+	 * Build and send request from a URL and JSON request
+	 * @param url URL of API
+	 * @param json GraphQL query wrapped in JSON request
+	 * @return ro the request object
+	 */
 	@Keyword
-	def testRequest(def url, def body) {
+	def testRequestJSON(String url, String json) {
 		RequestObject ro = findTestObject('Client Person/Services/Client/Create Client/CreateClient');
-		ro.setBodyContent(new HttpTextBodyContent(body))
+		ro.setBodyContent(new HttpTextBodyContent(json))
+		ro.setServiceType('REST')
+		ro.setRestUrl(url)
+		ro.setRestRequestMethod('POST')
+		
+		// build and set HTTP header properties
+		TestObjectProperty header = new TestObjectProperty("Content-Type", ConditionType.EQUALS, "application/json")
+		ArrayList defaultHeaders = Arrays.asList(header)
+		ro.setHttpHeaderProperties(defaultHeaders)
+		
+		return ro;
+	}
+
+	/**
+	 * Build and send request from a URL and GraphQL request
+	 * @param url URL of API
+	 * @param gql GraphQL query
+	 * @return ro the request object
+	 */
+	@Keyword
+	def testRequestGQL(String url, String gql) {
+		RequestObject ro = findTestObject('Client Person/Services/Client/Create Client/CreateClient');
+		
+		// build JSON from GraphQL query
+		def json = gql.replaceAll(/[\n]+/,' '); // Java.Lang.String (immutable)
+		json = json.replaceAll(/\s{2,}/, ' ');
+		json = json.replaceAll('"', '\\\\"');
+		json = '{"query":"'+json+'"}'
+		
+		// set HTTP Body
+		ro.setBodyContent(new HttpTextBodyContent(json))
 		ro.setServiceType('REST')
 		ro.setRestUrl(url)
 		ro.setRestRequestMethod('POST')

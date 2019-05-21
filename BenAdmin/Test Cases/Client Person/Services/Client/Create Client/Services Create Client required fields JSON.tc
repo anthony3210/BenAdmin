@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>This test case verifies that all of the required fields are required for Create Client.</description>
+   <name>Services Create Client required fields JSON</name>
+   <tag>CreateClient</tag>
+   <comment></comment>
+   <testCaseGuid>4237bce5-34f6-44d4-8f97-15cfaf1895ec</testCaseGuid>
+</TestCaseEntity>
