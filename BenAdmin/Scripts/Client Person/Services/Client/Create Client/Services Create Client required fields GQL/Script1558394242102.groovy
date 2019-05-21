@@ -53,7 +53,6 @@ url = 'https://api.benadmin.qa.maestroedgy.com/graphql'
 // make request (drag and drop!)
 testObject = findTestObject('Object Repository/Client Person/Services/Client/Create Client/CreateClient')
 response = GraphQL.testRequest(testObject, url, gql);
-//response = WS.sendRequestAndVerify(CustomKeywords.'benAdminQA.RequestSetup.testRequestGQL'(url, gql))
 
 // verify status
 WS.verifyResponseStatusCode(response, 200)

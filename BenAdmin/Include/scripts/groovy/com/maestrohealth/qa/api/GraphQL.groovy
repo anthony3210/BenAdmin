@@ -55,29 +55,35 @@ public class GraphQL {
 	 * @param gql the GraphQL query
 	 * @return response ResponseObject
 	 */
-	public static def ResponseObject testRequest(testObject, url, gql) {
-		RequestObject ro = testObject;
+	public static def ResponseObject testRequest(RequestObject testObject, String url, String gql) {
+		// set HTTP Body
+		testObject.setBodyContent(new HttpTextBodyContent(convertGrapqQLToJSON(gql)))
+		testObject.setServiceType('REST')
+		testObject.setRestUrl(url)
+		testObject.setRestRequestMethod('POST')
 		
+		// build and set HTTP Header properties
+		TestObjectProperty header = new TestObjectProperty("Content-Type", ConditionType.EQUALS, "application/json")
+		ArrayList defaultHeaders = Arrays.asList(header)
+		testObject.setHttpHeaderProperties(defaultHeaders)
+		
+		def response = WS.sendRequestAndVerify(testObject)
+		// could test against a passed status code here: WS.verifyResponseStatusCode(response, 200)
+		
+		return response;
+	}
+	
+	/**
+	 * Converts a GraphQL query into valid JSON
+	 * @param gql the graphQL query
+	 * @return json JSON of the form: {"query":"graphQL query"}
+	 */
+	public static def String convertGrapqQLToJSON(String gql) {
 		// build JSON from GraphQL query
 		def json = gql.replaceAll(/[\n]+/,' '); // Java.Lang.String (immutable)
 		json = json.replaceAll(/\s{2,}/, ' ');
 		json = json.replaceAll(/\"/, /\\"/);
 		json = '{"query":"'+json+'"}'
-		
-		// set HTTP Body
-		ro.setBodyContent(new HttpTextBodyContent(json))
-		ro.setServiceType('REST')
-		ro.setRestUrl(url)
-		ro.setRestRequestMethod('POST')
-		
-		// build and set HTTP header properties
-		TestObjectProperty header = new TestObjectProperty("Content-Type", ConditionType.EQUALS, "application/json")
-		ArrayList defaultHeaders = Arrays.asList(header)
-		ro.setHttpHeaderProperties(defaultHeaders)
-		
-		def response = WS.sendRequestAndVerify(ro)
-		// could test against a passed status code here: WS.verifyResponseStatusCode(response, 200)
-		
-		return response;
+		return json
 	}
 }
