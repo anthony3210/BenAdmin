@@ -19,6 +19,7 @@ import com.kms.katalon.core.testobject.TestObjectProperty as TestObjectProperty
 import com.kms.katalon.core.testobject.impl.HttpTextBodyContent as HttpTextBodyContent
 import benAdminQA.RequestSetup as RequestSetup
 import com.kms.katalon.core.testobject.TestObject as TestObject
+import com.maestrohealth.qa.api.GraphQL as GraphQL
 
 // build HTTP request body
 gql = '''\
@@ -49,15 +50,10 @@ mutation {
 '''
 url = 'https://api.benadmin.qa.maestroedgy.com/graphql'
 
-//// build JSON from GraphQL query
-//def json = gql.replaceAll(/[\n]+/,' '); // Java.Lang.String (immutable)
-//json = json.replaceAll(/\s{2,}/, ' ');
-//json = json.replaceAll(/\"/, /\\"/);
-//json = '{"query":"'+json+'"}'
-//println json
-
-// make request
-response = WS.sendRequestAndVerify(CustomKeywords.'benAdminQA.RequestSetup.testRequestGQL'(url, gql))
+// make request (drag and drop!)
+testObject = findTestObject('Object Repository/Client Person/Services/Client/Create Client/CreateClient')
+response = GraphQL.testRequest(testObject, url, gql);
+//response = WS.sendRequestAndVerify(CustomKeywords.'benAdminQA.RequestSetup.testRequestGQL'(url, gql))
 
 // verify status
 WS.verifyResponseStatusCode(response, 200)
