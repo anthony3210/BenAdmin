@@ -23,7 +23,18 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 // build HTTP request body
 gql = '''\
 mutation {
-  createAddress(address: {addressLine1: "169 Smith Street", addressLine2: "line2", city: "Chicago", postalCode: "60014", stateProvinceCode: "IL", attention: "Laura", county: "McHenry", countryISOCode: "US"}) {
+  createAddress(
+    address: {
+      addressLine1: "169 Smith Street"
+      addressLine2: "line2"
+      city: "Chicago"
+      postalCode: "60014"
+      stateProvinceCode: "IL"
+      attention: "Laura"
+      county: "McHenry"
+      countryISOCode: "US"
+    }
+  ) {
     addressUUID
     addressLine1
     addressLine2
